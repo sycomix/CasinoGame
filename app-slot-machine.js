@@ -22,3 +22,46 @@
 
 // weightedLottery(slots);
 
+
+
+// build a wallet for a player
+
+
+//below subject to change if an optimized way is found. 
+const playerWallet = [50] //starting the player off with $50
+
+const deposit = prompt("It costs $5 to start a game please would you liek to play a slot?")
+
+function addingtoWallet(deposit) {
+  playerWallet = playerWallet +=(deposit)
+  return playerWallet
+}
+
+function addWinningToWallet(){
+  //code to write
+} 
+
+const winningWithdrawal = //code to write
+
+function startGame(){
+  // code to write
+}
+
+
+
+// allow for the wallet to be added if the player chooses to
+
+// allow for any winnings to be included into the wallet
+
+/*
+if it goes empty allow for a button for them to add money into the wallet and allow 
+it to be shown only if the wallet is empty, the game cant keep going if 
+*/
+
+/*they need to be able to stop playing and cash out at any time
+*/
+
+//let the player se tthe dollar/cent amount of the bet(in the game)/
+
+//let them continue playing as long as they have money or decide to cash out. 
+
