@@ -45,31 +45,44 @@ Callback,Asychronous functions/ Lodash random and Times/ Do While Loops for maki
 Check is looping is best to keeo game running/ Asynchrounous programming
 */
 
-// build a wallet for a player
+
 
 
 //below subject to change if an optimized way is found. 
-const playerWallet = 50 //starting the player off with $50
 
-const deposit = prompt("It costs $5 to play, would you like to play? Yes or No")
+// build a wallet for a player
+let playerWallet = 50 //starting the player off with $50
 
-function startGame(){
-  if prompt.toLowerCase === yes{
-    playerWallet - 5;
-  } else if prompt.toLowerCase === no{
-    return `Thank you for playing the slot machine`
-  }
+
+console.log(playerWallet);
+
+function add(num) {
+  return `now your wallet is at ${playerWallet +=num};`
 }
 
+add(50);
 
+// to run the promp for asking game
+function play(){
+  const question = prompt("It costs $5 to play, would you like to play? Yes or No")
+  console.log(question)
+  if (question.toLowerCase() === "yes"){
+    console.log("Thank you for playing the slot machine");
+      ;
+      } else if (question.toLowerCase() === "no") {
+      console.log("Collect your money and have a great day");
+    }
+  }
+  
+  play();
+
+// Ad
 function addingtoWallet(deposit) {
   playerWallet = playerWallet +=(deposit)
   return playerWallet
 
 
-function add(num) {
-  return playerWallet + num
-}
+
 
 add(5);
 
