@@ -51,47 +51,43 @@ Check is looping is best to keep game running/ Asynchrounous programming
 //below subject to change if an optimized way is found. 
 
 // build a wallet for a player
-let playerWallet = 50 //starting the player off with $50
+let playerWallet = 1000; //starting the player off with $1000
+const wallet = document.getElementById("withdrawl-wallet") 
+let images = ['apple.jpeg','banana.png', 'orange.png']
 
 
-console.log(playerWallet);
 
-function add(num) {
-  return `now your wallet is at ${playerWallet +=num};`
+
+function add5() {
+  let msg5 =  playerWallet +=5;
+  return wallet.innerHTML = `"Now your wallet is at" $${msg5}`
 }
 
-add(50);
+function add50() {
+  let msg50 = playerWallet +=50
+  return wallet.innerHTML = `"Now your wallet is at" $${msg50}`
+}
 
-// to run the promp for asking game
-function play(){
-  const question = prompt("It costs $5 to play, would you like to play? Yes or No")
-  console.log(question)
-  if (question.toLowerCase() === "yes"){
-    console.log("Thank you for playing the slot machine");
-      ;
-      } else if (question.toLowerCase() === "no") {
-      console.log("Collect your money and have a great day");
-    }
-  }
-  
-  play();
+function add100() {
+  let msg100 = playerWallet +=100
+  return wallet.innerHTML = `"Now your wallet is at" $${msg100}`
+}
 
-// Add
-function addingtoWallet(deposit) {
-  playerWallet = playerWallet +=(deposit)
-  return playerWallet
+// 
 
 
 
 
-add(5);
+// Adding winning to the wallet  make this an onclick
 
 function addWinningToWallet(){
   //code to write
 } 
 
+// make this an onclick 
 const winningWithdrawal = //code to write
 
+// make this an onclick
 function startGame(){
   // code to write
 }
