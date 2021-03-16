@@ -42,7 +42,7 @@ Lottery Weighted /  Hangman / Diner Menu /
 JS Objects as Function Arguments / Object Deconstruction
 Bind and 'this'/ MDN track score/ Class and Instance Methods
 Callback,Asychronous functions/ Lodash random and Times/ Do While Loops for making sure the game is run/ 
-Check is looping is best to keeo game running/ Asynchrounous programming
+Check is looping is best to keep game running/ Asynchrounous programming
 */
 
 
@@ -76,7 +76,7 @@ function play(){
   
   play();
 
-// Ad
+// Add
 function addingtoWallet(deposit) {
   playerWallet = playerWallet +=(deposit)
   return playerWallet

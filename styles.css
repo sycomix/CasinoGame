@@ -1,1 +1,13 @@
 /* add styles to the slots */
+
+/* Check JS DOM Styles for animations */
+
+body, html {
+    margin: 0;
+    background-image: url("images/casino.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gold
+}
