@@ -12,6 +12,9 @@ body, html {
     background-color: gold
 }
 div {
-    color: gold;
+    color: rgba(1, 160, 15, 0.973);
     font-size: 2rem;
+}
+.slot-wallet {
+    background-color: gold;
 }

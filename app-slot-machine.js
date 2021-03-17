@@ -51,32 +51,43 @@ Check is looping is best to keep game running/ Asynchrounous programming
 //below subject to change if an optimized way is found. 
 
 // build a wallet for a player
-let playerWallet = 1000; //starting the player off with $1000
-const wallet = document.getElementById("withdrawl-wallet") 
-let images = ['apple.jpeg','banana.png', 'orange.png']
+
+
+const wallet = document.getElementById("withdrawl-wallet");
+const slotPics = document.getElementById("slot-images");
+const addFive = document.getElementById("add-5");
+const addFifty = document.getElementById("add-50");
+const addHundred = document.getElementById("add-100");
+const withDrawWallet = document.getElementById("wager");
+let playerWallet = 1000;
+let images = ['apple.jpeg','banana.png', 'orange.png'];
+
+// const orange = <img src="images/orange.png" width="300" height="300"></img>;
+// const apple =  <img src="images/apple.jpg" width="300" height="300"></img>;
+// const banana =  <img src="images/banana.png" width="300" height="300"></img>;
 
 
 
 
 function add5() {
   let msg5 =  playerWallet +=5;
-  return wallet.innerHTML = `"Now your wallet is at" $${msg5}`
+  return wallet.innerHTML = `Now your wallet is at $${msg5}`
 }
 
 function add50() {
   let msg50 = playerWallet +=50
-  return wallet.innerHTML = `"Now your wallet is at" $${msg50}`
+  return wallet.innerHTML = `Now your wallet is at $${msg50}`
 }
 
 function add100() {
   let msg100 = playerWallet +=100
-  return wallet.innerHTML = `"Now your wallet is at" $${msg100}`
+  return wallet.innerHTML = `Now your wallet is at $${msg100}`
 }
-
-// 
-
-
-
+function withDraw() {
+  // withDrawWallet.innerHTML = `Your balance is ${playerWallet}`
+  let msgTaken = playerWallet -= playerWallet
+  return wallet.innerHTML = `Now your wallet is at $${msgTaken}, If you would like to play again please add to the wallet`
+}
 
 // Adding winning to the wallet  make this an onclick
 
@@ -90,6 +101,19 @@ const winningWithdrawal = //code to write
 // make this an onclick
 function startGame(){
   // code to write
+}
+
+addFive.onclick=()=>{
+  add5();
+}
+addFifty.onclick=()=>{
+  add50();
+}
+addHundred.onclick=()=>{
+  add100();
+}
+withDrawWallet.onclick=()=>{
+  withDraw();
 }
 
 
