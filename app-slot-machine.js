@@ -1,40 +1,3 @@
-/*Slot machine game, Utilize above to be a base idea of what i want the program to give an output on 
-
-
-const slotMachine = slot => {
-let container = []; 
-Object.keys(slot).forEach(key => {
-for(let i = 0; i < slot[key]; i++) {
-container.push(key);
-} 
-})
-return container[(Math.random() * container.length) | 0];
-}
-
-const slots = {
-"bannana,bannana,bannana" : 20,
-"apple,apple,apple": 10,
-"orange,orange,oragne": 30,
-"apple,orange,bannana": 2000,
-"orange,bannana,apple":3000,
-"bannana,apple,orange":3000
-}
-
-weightedLottery(slots); */
-
-
-/*
-
-Use this kind of function below for sending out the amount in the wallet and
-telling them they are a winner
-
-function halfOf(num) {
-return `Half of ${num} is ${num/2}`
-}
-
-halfOf(215);
-
-
 /* 
 Ideas and concepts needed to build for Slot Machine
 
@@ -59,14 +22,32 @@ const addFive = document.getElementById("add-5");
 const addFifty = document.getElementById("add-50");
 const addHundred = document.getElementById("add-100");
 const withDrawWallet = document.getElementById("wager");
+const slot1 = document.getElementById("pic1");
+const slot2 = document.getElementById("pic1");
+const slot3 = document.getElementById("pic1");
 let playerWallet = 1000;
 let images = ['apple.jpeg','banana.png', 'orange.png'];
 
-// const orange = <img src="images/orange.png" width="300" height="300"></img>;
-// const apple =  <img src="images/apple.jpg" width="300" height="300"></img>;
-// const banana =  <img src="images/banana.png" width="300" height="300"></img>;
+// Maybe the below will be used 
+
+/*
+const orange = <img src="images/orange.png" width="300" height="300"></img>;
+const apple =  <img src="images/apple.jpg" width="300" height="300"></img>;
+const banana =  <img src="images/banana.png" width="300" height="300"></img>;
+*/
+// How I get random pictures in the slots 
+let randomPic1 = images[Math.floor(Math.random() * images.length)];
+let randomPic2 = images[Math.floor(Math.random() * images.length)];
+let randomPic3 = images[Math.floor(Math.random() * images.length)];
 
 
+// create something to tie the document to the img slots because they need
+
+if(randomPic1===randomPic2 && randomPic2===randomPic3){
+  console.log("Win"); // Write a function to make sure that you win and add it to the wallet  
+}else{
+  console.log("Lose"); // Write a function to make sure that you lose money once you play 
+}
 
 
 function add5() {

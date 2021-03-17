@@ -18,3 +18,10 @@ div {
 .slot-wallet {
     background-color: gold;
 }
+.slots-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.slots-wrapper > div {
+    margin: 10px;
+}
