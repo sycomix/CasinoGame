@@ -13,7 +13,7 @@ body, html {
     display: flex;
     flex-direction: column;
 
-    padding-top: 15%;
+    padding-top: 6%;
 }
 div {
     color: rgba(1, 160, 15, 0.973);

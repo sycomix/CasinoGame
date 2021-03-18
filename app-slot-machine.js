@@ -1,6 +1,5 @@
 // All of my constants to grab the html id's to be able to make the changes once they are clicked
 const wallet = document.getElementById("withdrawl-wallet");
-const slotPics = document.getElementById("slot-images");
 const addFive = document.getElementById("add-5");
 const addFifty = document.getElementById("add-50");
 const addHundred = document.getElementById("add-100");
@@ -54,7 +53,8 @@ function add100() {
 // Function to withdraw money and return a balance of the amount
 function withDraw() {
   takehomeWallet.push(playerWallet)
-  Bank.innerHTML = `Your Balance is $${takehomeWallet}`
+  const walletSum = takehomeWallet => takehomeWallet.reduce((num1,num2)=> num1 + num2)
+  Bank.innerHTML = `Your withdrawl amounts are $${walletSum(takehomeWallet)}`
   let msgTaken = playerWallet -= playerWallet
   return wallet.innerHTML = `Now your wallet is at $${msgTaken}, If you would like to play again please add to the wallet`
 }
