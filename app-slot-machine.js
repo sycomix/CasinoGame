@@ -1,54 +1,40 @@
-/* 
-Ideas and concepts needed to build for Slot Machine
-
-Lottery Weighted /  Hangman / Diner Menu / 
-JS Objects as Function Arguments / Object Deconstruction
-Bind and 'this'/ MDN track score/ Class and Instance Methods
-Callback,Asychronous functions/ Lodash random and Times/ Do While Loops for making sure the game is run/ 
-Check is looping is best to keep game running/ Asynchrounous programming
-*/
-
-
-
-
-//below subject to change if an optimized way is found. 
-
-// build a wallet for a player
-
-
 const wallet = document.getElementById("withdrawl-wallet");
 const slotPics = document.getElementById("slot-images");
 const addFive = document.getElementById("add-5");
 const addFifty = document.getElementById("add-50");
 const addHundred = document.getElementById("add-100");
 const withDrawWallet = document.getElementById("wager");
-const slot1 = document.getElementById("pic1");
-const slot2 = document.getElementById("pic1");
-const slot3 = document.getElementById("pic1");
+const slot1 = document.getElementById("Pic1");
+const slot2 = document.getElementById("Pic2");
+const slot3 = document.getElementById("Pic3");
+const startGame = document.getElementById("play");
+const Bank = document.querySelectorAll(".stored-wallet")[0];
 let playerWallet = 1000;
-let images = ['apple.jpeg','banana.png', 'orange.png'];
-
-// Maybe the below will be used 
-
-/*
-const orange = <img src="images/orange.png" width="300" height="300"></img>;
-const apple =  <img src="images/apple.jpg" width="300" height="300"></img>;
-const banana =  <img src="images/banana.png" width="300" height="300"></img>;
-*/
-// How I get random pictures in the slots 
-let randomPic1 = images[Math.floor(Math.random() * images.length)];
-let randomPic2 = images[Math.floor(Math.random() * images.length)];
-let randomPic3 = images[Math.floor(Math.random() * images.length)];
+let takehomeWallet = []
+let images = ['apple.jpg','banana.png', 'orange.png'];
 
 
-// create something to tie the document to the img slots because they need
+function slotMachine(){
+  if(playerWallet <=5 ){ 
+    return wallet.innerHTML = `Please Deposit at least $5 to play`
+  } else {
+let randomPic1 = Math.floor(Math.random() * images.length);
+let randomPic2 = Math.floor(Math.random() * images.length);
+let randomPic3 = Math.floor(Math.random() * images.length);
+
+slot1.src=`images/${images[randomPic1]}`
+slot2.src=`images/${images[randomPic2]}`
+slot3.src=`images/${images[randomPic3]}`
 
 if(randomPic1===randomPic2 && randomPic2===randomPic3){
-  console.log("Win"); // Write a function to make sure that you win and add it to the wallet  
+  let msgWin = playerWallet +=50
+  return wallet.innerHTML = `Congratulations You Won, now your wallet is at $${msgWin}`
 }else{
-  console.log("Lose"); // Write a function to make sure that you lose money once you play 
+  let msgLoss =  playerWallet -=5;
+  return wallet.innerHTML = `Now your wallet is at $${msgLoss}`
+  }
 }
-
+}
 
 function add5() {
   let msg5 =  playerWallet +=5;
@@ -66,22 +52,15 @@ function add100() {
 }
 function withDraw() {
   // withDrawWallet.innerHTML = `Your balance is ${playerWallet}`
+
   let msgTaken = playerWallet -= playerWallet
   return wallet.innerHTML = `Now your wallet is at $${msgTaken}, If you would like to play again please add to the wallet`
 }
 
-// Adding winning to the wallet  make this an onclick
 
-function addWinningToWallet(){
-  //code to write
-} 
 
-// make this an onclick 
-const winningWithdrawal = //code to write
-
-// make this an onclick
-function startGame(){
-  // code to write
+startGame.onclick=()=>{
+  slotMachine()
 }
 
 addFive.onclick=()=>{
@@ -98,23 +77,4 @@ withDrawWallet.onclick=()=>{
 }
 
 
-/*
-
-allow for the wallet to be added if the player chooses to
-
-allow for any winnings to be included into the wallet
-
-
-if it goes empty allow for a button for them to add money into the wallet and allow 
-it to be shown only if the wallet is empty, the game cant keep going if 
-
-
-they need to be able to stop playing and cash out at any time
-
-
-let the player se tthe dollar/cent amount of the bet(in the game)/
-
-let them continue playing as long as they have money or decide to cash out. 
-
-*/
 
