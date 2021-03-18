@@ -7,6 +7,14 @@ body, html {
     background-size: cover;
     background-color: gold
 }
+#page-wrap {
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 15%;
+}
 div {
     color: rgba(1, 160, 15, 0.973);
     font-size: 2rem;
@@ -19,5 +27,8 @@ div {
     flex-direction: row;
 }
 .slots-wrapper > div {
-    margin: 10px;
+    margin: 20px;
+}
+.wallet-wrapper .stored-wallet {
+    background-color: gold;
 }

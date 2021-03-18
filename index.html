@@ -6,41 +6,43 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="slots-wrapper">
-    <div>
-      <img id="Pic1" src="images/orange.png" width="300" height="300" alt="">
-    </div>
-    <div>
-      <img id="Pic2" src="images/apple.jpg" width="300" height="300" alt="">
-    </div>
-    <div>
-      <img id ="Pic3" src="images/banana.png" width="300" height="300" alt="">
-    </div>
-  </div>
-
-  <div class="wallet-wrapper">
-    <div class="slot-wallet" id="withdrawl-wallet">
-      <div>Your wallet has $1,000</div> 
+  <div id="page-wrap">
+    <div class="slots-wrapper">
+      <div>
+        <img id="Pic1" src="images/orange.png" width="300" height="300" alt="fruit">
+      </div>
+      <div>
+        <img id="Pic2" src="images/lemons.jpg" width="300" height="300" alt="fruit">
+      </div>
+      <div>
+        <img id ="Pic3" src="images/banana.png" width="300" height="300" alt="fruit">
+      </div>
     </div>
 
-    <button id="play" class="start-game">Play Slot</button>
+    <div class="wallet-wrapper">
+      <div class="slot-wallet" id="withdrawl-wallet">
+        <div>Your wallet has $1,000</div> 
+      </div>
 
-    <div class="take-wallet" id="wager">
-        <button class="opt-out-game">Withdraw from Wallet</button>
+      <button id="play" class="start-game">Play Slot</button>
+
+      <div class="take-wallet" id="wager">
+          <button class="opt-out-game">Withdraw to Wallet</button>
+      </div>
+    
+      <div class="stored-wallet" id="store-wallet">
+          Your Balance is $
+      </div>
     </div>
 
-    <div class="stored-wallet" id="store-wallet">
-      
+    <div class="buttons-wrapper" id="add-to-wallet">
+      <button  id="add-5">Add $5</button> 
+      <button id="add-50">Add $50</button> 
+      <button id="add-100">Add $100</button> 
     </div>
-  </div>
+</div>
 
-  <div class="buttons-wrapper" id="add-to-wallet">
-    <button  id="add-5">Add $5</button> 
-    <button id="add-50">Add $50</button> 
-    <button id="add-100">Add $100</button> 
-  </div>
-
-<!-- Crreating External Script -->
+<!-- Creating External Script -->
   <script src="app-slot-machine.js">
   </script>
 </body>
