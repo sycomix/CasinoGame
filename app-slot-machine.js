@@ -53,8 +53,8 @@ function add100() {
 // Function to withdraw money and return a balance of the amount
 function withDraw() {
   takehomeWallet.push(playerWallet)
-  const walletSum = takehomeWallet => takehomeWallet.reduce((num1,num2)=> num1 + num2)
-  Bank.innerHTML = `Your withdrawl amounts are $${walletSum(takehomeWallet)}`
+  const walletSum = () => takehomeWallet.reduce((num1,num2)=> num1 + num2)
+  Bank.innerHTML = `Your withdrawl amounts are $${walletSum()}`
   let msgTaken = playerWallet -= playerWallet
   return wallet.innerHTML = `Now your wallet is at $${msgTaken}, If you would like to play again please add to the wallet`
 }
